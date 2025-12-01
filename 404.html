@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <base href="/EyeCareCenter/">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!-- SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="مركز العناية بالعيون — تشخيص بصري متقدم، عمليات الليزك، عيادات الشبكية، الحول، عيون الأطفال، وتجميل الأجفان.">
+    <meta name="keywords"
+          content="عمليات ليزر, ليزك, عيون, مركز العناية بالعيون, شبكية, حول, تجميل الأجفان, فحص نظر, Eye Care Center">
+    <meta name="author" content="Eye Care Center">
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#4B5DFF">
+
+    <!-- iOS Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="مركز العناية بالعيون">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- iOS Icon -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+
+    <!-- PWA Icons -->
+    <link rel="manifest" href="manifest.json">
+
+    <title>مركز العناية بالعيون</title>
+
+    <style>
+        body {
+          margin: 0;
+          background: white;
+        }
+
+        #loading {
+          position: fixed;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: #ffffff;
+          z-index: 9999;
+        }
+
+        .loader {
+          width: 60px;
+          height: 60px;
+          border: 6px solid #dce1ff;
+          border-top-color: #4B5DFF;
+          border-radius: 50%;
+          animation: spin 0.9s linear infinite;
+        }
+
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+
+<!-- Loading Screen -->
+<div id="loading">
+    <div class="loader"></div>
+    <p style="margin-top: 15px; font-size: 18px; color: #4B5DFF;">
+        جاري التحميل...
+    </p>
+</div>
+
+<script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('loading').style.display = 'none';
+    });
+</script>
+
+<script src="flutter_bootstrap.js" async></script>
+
+</body>
+</html>
